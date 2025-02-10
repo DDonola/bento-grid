@@ -1,0 +1,53 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    & div.container {
+        display: grid;
+        grid-template-columns: repeat( 4, 1fr);
+        overflow: hidden;
+        gap: 32px;
+    }
+}
+
+div#one {
+    background-color: var(--purple-500);
+    grid-column: 2 / 3;
+}
+
+div#two {
+    background-color: var(--white);
+    grid-column: 2;
+}
+
+div#three {
+    background-color: var(--yellow-500);
+    grid-column: 3;
+}
+
+div#four {
+    background-color: var(--purple-100);
+    grid-column: 4;
+}
+
+div#five {
+    background-color: var(--purple-500);
+    grid-column: 3 / 4;
+}
+
+div#six {
+    background-color: var(--white);
+    grid-column: 2;
+}
+
+div#seven {
+    background-color: var(--yellow-100);
+    grid-column: 1;
+}
+
+div#eight {
+    background-color: var(--yellow-500);
+    grid-column: 1;
+}
