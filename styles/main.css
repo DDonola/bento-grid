@@ -2,52 +2,72 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 
     & div.container {
         display: grid;
-        grid-template-columns: repeat( 4, 1fr);
-        overflow: hidden;
-        gap: 32px;
+        grid-auto-columns: 256px;
+        grid-auto-rows: 60px;
+        grid-template-areas:
+       "item1 item2 item2 item3"
+       "item1 item2 item2 item3"
+       "item1 item2 item2 item3"
+       "item1 item2 item2 item3"
+       "item1 item2 item2 item3"
+       "item4 item5 item6 item3"
+       "item4 item5 item6 item3"
+       "item4 item5 item6 item3"
+       "item4 item7 item8 item8"
+       "item4 item7 item8 item8"
+       "item4 item7 item8 item8";
+       gap: 32px;
+    }
+
+    & div.card {
+        border-radius: 10px;
     }
 }
 
 div#one {
     background-color: var(--purple-500);
-    grid-column: 2 / 3;
+    grid-area: item2;
+    
+    & img {
+        width: 192px;;
+    }
 }
 
 div#two {
     background-color: var(--white);
-    grid-column: 2;
+    grid-area: item5;
 }
 
 div#three {
     background-color: var(--yellow-500);
-    grid-column: 3;
+    grid-area: item6;
 }
 
 div#four {
     background-color: var(--purple-100);
-    grid-column: 4;
+    grid-area: item3;
 }
 
 div#five {
     background-color: var(--purple-500);
-    grid-column: 3 / 4;
+    grid-area: item8;
 }
 
 div#six {
     background-color: var(--white);
-    grid-column: 2;
+    grid-area: item7;
 }
 
 div#seven {
     background-color: var(--yellow-100);
-    grid-column: 1;
+    grid-area: item1;
 }
 
 div#eight {
     background-color: var(--yellow-500);
-    grid-column: 1;
+    grid-area: item4;
 }

@@ -13,11 +13,11 @@
     --black: hsl(0, 0%, 7%);
 
     --ff: "DM Sans", sans-serif;
-    --fp: 400 18px var(--ff);
-    --fh1: 500 62px var(--ff);
-    --fh2: 500 40px var(--ff);
-    --fh3: 500 38px var(--ff);
-    --fh4: 500 32px var(--ff);
+    --fp: 400 18px/20px var(--ff);
+    --fh1: 500 62px/60px var(--ff);
+    --fh2: 500 40px/36px var(--ff);
+    --fh3: 500 38px/36px var(--ff);
+    --fh4: 500 32px/28px var(--ff);
 }
 
 body {
@@ -40,4 +40,9 @@ body {
     & h4 {
         font: var(--fh4);
     }
+}
+
+img {
+    width: 100%;
+    display: block;
 }
